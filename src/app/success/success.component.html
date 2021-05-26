@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/success">Success</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#" (click)="doLogout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container pt-5">
+   
+   <div class="bg-light p-5 rounded">
+    <h1>Welcome your login was successful</h1>
+    <p class="lead">This example is a quick exercise to illustrate how to perform a simple authentication using <a href="https://angular.io/" target="_blank">Angular</a> and <a href="https://www.django-rest-framework.org/" target="_blank">Django rest framework</a></p>
+    <button class="btn btn-primary" (click)="doLogout()">Logout</button>
+  </div>
+</div>
