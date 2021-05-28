@@ -41,11 +41,13 @@ export class AuthService {
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
         })
-      }).pipe(catchError(this.handleError))
-      .toPromise();
+      }).toPromise();
 
       console.log('TOKEN -- ', response.token)
-
+      if(response.status===400)
+      {
+        console.log('40000000000')
+      }
       return response;
 
     } catch (error) {

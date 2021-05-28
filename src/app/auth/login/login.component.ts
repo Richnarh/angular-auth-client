@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
     localStorage.setItem('token',response.token);
 
     const token = localStorage.getItem('token');
-    
+
     console.log('login token -- ', localStorage.getItem('token'))
 
     if(token === null || token == undefined)
