@@ -46,8 +46,15 @@ export class LoginComponent implements OnInit {
     }
     const response = await this.authService.doLogin(this.loginDto);
 
-    localStorage.setItem('token',response.token);
+    localStorage.setItem('token -- ',response.token);
 
+    console.log('login -- '+response.token);
+    
+    if(!response)
+    {
+      this.notification.errorMessage('Please provide correct login details', 'Error');
+      return;
+    }
     this.router.navigate(['/success/']);
     
   } catch (error) { } finally { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
+import { NotificationService } from '../shared/utils/notification-service';
 
 @Component({
   selector: 'app-success',
@@ -9,9 +10,10 @@ import { AuthService } from '../auth/auth.service';
 })
 export class SuccessComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private notification: NotificationService) { }
 
   ngOnInit(): void {
+    this.notification.successMessage('Your login is successful', "Success");
   }
 
   public  doLogout()
