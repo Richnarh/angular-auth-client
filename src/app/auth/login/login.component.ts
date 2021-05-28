@@ -46,11 +46,13 @@ export class LoginComponent implements OnInit {
     }
     const response = await this.authService.doLogin(this.loginDto);
 
-    localStorage.setItem('token -- ',response.token);
+    localStorage.setItem('token',response.token);
 
-    console.log('login -- '+response.token);
+    const token = localStorage.getItem('token');
     
-    if(!response)
+    console.log('login token -- ', localStorage.getItem('token'))
+
+    if(token === null || token == undefined)
     {
       this.notification.errorMessage('Please provide correct login details', 'Error');
       return;
